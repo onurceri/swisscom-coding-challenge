@@ -1,0 +1,11 @@
+fastapi==0.109.2
+uvicorn==0.27.1
+
+celery==5.3.6
+
+httpx==0.26.0
+
+redis==5.0.1
+
+pytest==8.0.1
+pytest-mock==3.12.0

@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  fastapi:
+    build: .
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - redis
+      - rabbitmq
+    environment:
+      - HOSTS=host.docker.internal:8001,host.docker.internal:8002,host.docker.internal:8003
+      - CELERY_BROKER_URL=amqp://guest:guest@rabbitmq:5672//
+      - CELERY_RESULT_BACKEND=redis://redis:6379/0
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - REDIS_DB=0
+
+  celery_worker:
+    build: .
+    command: celery -A app.celery_tasks.celery_app worker --loglevel=info --concurrency=1
+    volumes:
+      - .:/app
+    depends_on:
+      - redis
+      - rabbitmq
+    environment:
+      - CELERY_BROKER_URL=amqp://guest:guest@rabbitmq:5672//
+      - CELERY_RESULT_BACKEND=redis://redis:6379/0
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - REDIS_DB=0
+
+  redis:
+    image: redis:6.0
+    ports:
+      - "6379:6379"
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    ports:
+      - "5672:5672"
+      - "15672:15672"

@@ -1,0 +1,57 @@
+# Ignore virtual environment related files
+node_modules/
+venv/
+.venv/
+env/
+.env
+
+# Ignore temporary files
+*.pyc
+__pycache__
+
+# Ignore test and coverage files
+__pycache__
+*.cache
+.coverage
+.pytest_cache/
+
+# Ignore documentation builds (if applicable)
+docs/build/
+.sphinx/
+
+# Ignore IDE-specific files
+.vscode/
+.idea/
+
+# Ignore logs and database files
+*.log
+db.sqlite3
+*.db
+
+# Ignore compiled files
+*/*.js.map
+*/*.css.map
+
+# Ignore all test results and reports
+test_results/*
+tests/results/*
+
+# Ignore generated files
+generated/*
+
+# Ignore FastAPI-specific files
+.coverage_*
+fastapi-apps.iml
+
+# Ignore environment-specific files
+.env.*  # Ignore all files starting with .env and a dot
+!requirements.txt  # Allow requirements.txt
+
+# Ignore Docker related files
+.dockerignore
+
+# Ignore all files in the .gitignores folder
+.gitignores/*
+
+# Add any other files you want to ignore here
+.ruff_cache/*
