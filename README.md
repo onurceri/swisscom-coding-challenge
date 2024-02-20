@@ -150,6 +150,7 @@ Run this command to configure your shell to use Minikube's Docker daemon:
 
 ```shell
 eval $(minikube docker-env)
+# On Windows, use minikube docker-env | Invoke-Expression
 ```
 
 3. **Build Docker Image**
