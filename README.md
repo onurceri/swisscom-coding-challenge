@@ -57,7 +57,7 @@ This FastAPI application facilitates the asynchronous creation and deletion of g
 
 ```json
 {
-"group_id": "test-group-1"
+   "group_id": "test-group-1"
 }
 ```
 #### Delete Group
@@ -68,7 +68,7 @@ This FastAPI application facilitates the asynchronous creation and deletion of g
 - Example:
 ```json
 {
-"group_id": "test-group-1"
+   "group_id": "test-group-1"
 }
 ```
 #### Get Task Status
