@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: celery-worker
-          image: fastapi-celery-app:latest
+          image: fastapi-app:latest
           imagePullPolicy: IfNotPresent
           command:
             [
