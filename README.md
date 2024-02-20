@@ -176,9 +176,7 @@ minikube service fastapi-app-service --url
 ```
 
 9. **Creating NODES for Help to Test**
-```shell
-You can use [a link](https://github.com/onurceri/mock-node-api) repository to create NODES to mock node api response's.
-```
+You can use https://github.com/onurceri/mock-node-api repository to create NODES to mock node api response's.
 
 ## Running Tests
 To ensure the reliability of the application, follow these steps to run the automated test suite:
