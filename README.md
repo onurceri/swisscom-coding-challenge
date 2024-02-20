@@ -186,7 +186,7 @@ To ensure the reliability of the application, follow these steps to run the auto
 ### Prerequisites
 - Python
 - Pip
-- 
+
 ### Steps
 1.  **Activate the Virtual Environment (Optional)**
 ```shell
